@@ -1,8 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import { WebView, requireNativeComponent, NativeModules } from 'react-native';
 const { CustomWebViewManager } = NativeModules; 
 
-export default class CustomWebView extends Component {
+export default class CustomWebView extends React.Component {
   static propTypes = {
     ...WebView.propTypes,
     finalUrl: PropTypes.string,
